@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sha NGO Final</title>
+
+    <!--    BootStrap CDN Links     -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <!--    BootStrap CDN Links End     -->
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!--    Main Navbar    -->
+
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+            <img src="https://image.flaticon.com/icons/svg/2599/2599741.svg" width="30" height="30" alt="">
+        </a>
+        <a class="navbar-brand" href="#">NGO_SHA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Go to Page
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'course_master_new' %}">Courses</a>
+                        <a class="dropdown-item" href="{% url 'source_master_new' %}">Sources</a>
+                        <a class="dropdown-item" href="{% url 'calling_master_form' %}">Calling Master</a>
+                        <a class="dropdown-item" href="{% url 'calling_transaction_form'  %}">Calling Transaction</a>
+                        <a class="dropdown-item" href="{% url 'training_candidate_master' %}">Training Candidate Master</a>
+                        <a class="dropdown-item" href="{% url 'training_transaction_form' %}">Training Transaction Master</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link text-white mx-2" href="#">UserName</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-danger border border-dark">Logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Browse from the Go To Page.</h1>
+    
+    <!--    Main Content     -->
+        {% block content %}{% endblock %}
+    <!--    Main Content End    -->
+
+</body>
+
+</html>
